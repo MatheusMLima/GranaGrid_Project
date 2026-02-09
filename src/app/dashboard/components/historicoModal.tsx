@@ -101,7 +101,7 @@ export default function HistoricoModal({ isOpen, onClose, transacaoUser = [] }: 
                 <div className="p-6 overflow-y-auto custom-scrollbar bg-[#1e293b]">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {dadosProcessados.map((item, index) => (
-                            <Link key={index} href={`$/dashboard/${nomeMeses[item.mesIndex]}-${item.ano.toString()}`} className="bg-[#263345] rounded-xl p-5 border border-slate-700 hover:border-blue-500 hover:bg-[#2c3b52] hover:scale-[1.02] 
+                            <Link key={index} href={`/dashboard/${nomeMeses[item.mesIndex]}-${item.ano.toString()}`} className="bg-[#263345] rounded-xl p-5 border border-slate-700 hover:border-blue-500 hover:bg-[#2c3b52] hover:scale-[1.02] 
                                 transition-all duration-200 cursor-pointer block group">
 
                                 <div className="flex justify-between items-start mb-4">
