@@ -4,7 +4,7 @@ import { Search, Plus, X, ArrowDown } from 'lucide-react'
 import { useState } from 'react'
 import { TransacaoModal } from './transacaoModal'
 import { useRef, useEffect } from 'react'
-import { TipoTransacao, MetodoPagamento } from '@/generated/prisma/enums'
+import { TipoTransacao, MetodoPagamento } from '@/generated/prisma'
 
 type UserData = {
     id: string

@@ -1,6 +1,6 @@
 import { X, TrendingUp } from 'lucide-react'
 import Link from 'next/link'
-import { TipoTransacao } from '@/generated/prisma/enums'
+import { TipoTransacao } from '@/generated/prisma'
 import { useMemo } from 'react'
 
 type transacoesUsuario = {

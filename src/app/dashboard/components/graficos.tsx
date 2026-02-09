@@ -1,7 +1,7 @@
 'use client'
 
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend } from 'recharts'
-import { TipoTransacao } from '@/generated/prisma/enums'
+import { TipoTransacao } from '@/generated/prisma'
 import { useState, useMemo } from 'react'
 import { ArrowDownCircle, BarChart3 } from 'lucide-react' 
 import { FaMoneyBill1Wave } from "react-icons/fa6"

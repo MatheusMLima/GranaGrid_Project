@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 import { CreateTransacao, EditTransacao } from '../_actions/transacoes'
 import { id } from 'zod/locales'
 import { number } from 'zod'
-import { MetodoPagamento, TipoTransacao } from "@/generated/prisma/enums"
+import { MetodoPagamento, TipoTransacao } from "@/generated/prisma"
 import { toast } from 'sonner'
 
 

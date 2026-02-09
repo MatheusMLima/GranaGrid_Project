@@ -1,5 +1,5 @@
 import { Home, ShoppingCart, Car, UtensilsCrossed, Plane, HeartPlus, Cpu, DollarSign, CarTaxiFront, Gamepad2, Airplay, LucideIcon } from 'lucide-react'
-import { TipoTransacao, Icones } from '@/generated/prisma/enums'
+import { TipoTransacao, Icones } from '@/generated/prisma'
 
 type Props = {
   transacoes: Transacao[]

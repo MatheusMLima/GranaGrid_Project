@@ -4,7 +4,7 @@ import { Calendar, Download, House, History } from "lucide-react";
 import { MenuUsuario } from './menuUsuario'
 import { useState } from "react";
 import HistoricoModal from "./historicoModal";
-import { TipoTransacao, MetodoPagamento } from "@/generated/prisma/enums";
+import { TipoTransacao, MetodoPagamento } from "@/generated/prisma";
 import { useRouter, usePathname } from 'next/navigation'
 import { toast } from 'sonner'
 import ExcelJS from 'exceljs'

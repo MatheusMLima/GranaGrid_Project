@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { ArrowDownCircle, ArrowUpCircle } from 'lucide-react'
 import { TransactionsFilters } from './transactionsFilter'
 import { TransactionsTable } from './transactionsTable'
-import { TipoTransacao, MetodoPagamento } from '@/generated/prisma/enums'
+import { TipoTransacao, MetodoPagamento } from '@/generated/prisma'
 
 type UserData = {
     id: string

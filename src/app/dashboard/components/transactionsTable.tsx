@@ -1,6 +1,6 @@
 'use client'
 
-import { TipoTransacao, MetodoPagamento } from '@/generated/prisma/enums'
+import { TipoTransacao, MetodoPagamento } from '@/generated/prisma'
 import { ArrowUpDown, Edit, Trash2 } from 'lucide-react'
 import { useState } from 'react'
 import { TransacaoModal } from './transacaoModal'

@@ -1,6 +1,6 @@
 import { TrendingUp, TrendingDown, DollarSign, Wallet } from "lucide-react";
 import { StatCard } from "./statCard";
-import { TipoTransacao, MetodoPagamento } from "@/generated/prisma/enums";
+import { TipoTransacao, MetodoPagamento } from "@/generated/prisma";
 
 type Props = {
     transacoes: Transacao[],

@@ -1,4 +1,4 @@
-import { TipoTransacao } from '@/generated/prisma/enums'
+import { TipoTransacao } from '@/generated/prisma'
 
 type Props = {
   transacoes: Transacao[]

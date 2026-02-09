@@ -3,7 +3,7 @@
 import { success, z } from "zod"
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { MetodoPagamento, TipoTransacao } from "@/generated/prisma/enums"
+import { MetodoPagamento, TipoTransacao } from "@/generated/prisma"
 import { revalidatePath } from "next/cache"
 import cuid from 'cuid'
 
