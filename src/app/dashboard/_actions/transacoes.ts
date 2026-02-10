@@ -1,5 +1,6 @@
 "use server"
 
+import { fromZonedTime } from "date-fns-tz"
 import { success, z } from "zod"
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
@@ -12,6 +13,7 @@ const CreateTransacaoSchema = z.object({
     descricao: z.string().min(4, "A descrição precisa ter pelo menos 1 caracteres"),
     valor: z.string(),
     data: z.date(),
+    timezone: z.string(),
     tipoTransacao: z.nativeEnum(TipoTransacao),
     metodoPagamento: z.nativeEnum(MetodoPagamento),
     numeroParcela: z.number(),
@@ -109,7 +111,7 @@ export async function CreateTransacao(data: CreateTransacaoFormData) {
                 data: {
                     descricao: data.descricao,
                     valor: arrayParcelas[i].toString(),
-                    data: new Date(data.data),
+                    data: fromZonedTime(data.data, data.timezone),
                     tipoTransacao: data.tipoTransacao,
                     metodoPagamento: data.metodoPagamento,
                     numeroParcela: data.numeroParcela,
@@ -236,7 +238,7 @@ export async function EditTransacao(data: CreateTransacaoFormData) {
                     error: "Banco não encontrado no Bando de Dados"
                 }
             }
-
+            
             await prisma.transacao.update({
                 where: {
                     transacaoId: data.transacaoId
@@ -244,7 +246,7 @@ export async function EditTransacao(data: CreateTransacaoFormData) {
                 data: {
                     descricao: data.descricao,
                     valor: data.valor.toString(),
-                    data: new Date(data.data), // Converta string para Date
+                    data: fromZonedTime(data.data, data.timezone),
                     tipoTransacao: data.tipoTransacao,
                     metodoPagamento: data.metodoPagamento,
 

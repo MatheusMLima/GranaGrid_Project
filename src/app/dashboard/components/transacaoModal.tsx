@@ -94,6 +94,7 @@ export function TransacaoModal({ open, onClose, categoria, banco, edit, transaca
 
     async function submitAction(formData: FormData) {
         const obrigatorios = ["descricao", "valor", "data", "tipoTransacao", "metodoPagamento", "categoria", "banco"] //double check para campos obrigatórios
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
 
         const estaVazio = obrigatorios.some(field => !formData.get(field))
 
@@ -148,6 +149,7 @@ export function TransacaoModal({ open, onClose, categoria, banco, edit, transaca
             descricao: descricao,
             valor: valor.toString(),
             data: data,
+            timezone: timeZone,
             tipoTransacao: tipoTransacao,
             metodoPagamento: metodoPagamento,
             numeroParcela: 1,

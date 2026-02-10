@@ -62,6 +62,7 @@ model Banco {
 model Transacao {
   transacaoId  String  @id @default(cuid())
 
+  /// @encrypted
   valor             String
   data              DateTime // data da entrada ou saida
 
